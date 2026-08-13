@@ -10,7 +10,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-
   integrations: [sitemap()],
   fonts: [
     {
@@ -21,4 +20,5 @@ export default defineConfig({
       styles: ["normal", "italic"],
     },
   ],
+  site: 'https://cphlive.vatsim-scandinavia.org',
 });
