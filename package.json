@@ -11,7 +11,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,tsx,astro}\"",
-    "lint:fix": "eslint \"src/**/*.{js,mjs,cjs,ts,tsx,astro}\" --fix"
+    "lint:fix": "eslint \"src/**/*.{js,mjs,cjs,ts,tsx,astro}\" --fix",
+    "format": "prettier . --write --cache",
+    "format:check": "prettier . --check --cache"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

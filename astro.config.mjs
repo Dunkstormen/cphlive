@@ -1,14 +1,14 @@
 // @ts-check
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig, fontProviders } from "astro/config";
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
-import sitemap from '@astrojs/sitemap';
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
   integrations: [sitemap()],
   fonts: [
@@ -20,5 +20,5 @@ export default defineConfig({
       styles: ["normal", "italic"],
     },
   ],
-  site: 'https://cphlive.vatsim-scandinavia.org',
+  site: "https://cphlive.vatsim-scandinavia.org",
 });
