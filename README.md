@@ -1,43 +1,50 @@
-# Astro Starter Kit: Minimal
+# Copenhagen Live 2026
+
+Event website for Copenhagen Live 2026, a full day of live virtual air traffic control across Copenhagen and Danish airspace, organised by VATSIM Scandinavia.
+
+## Requirements
+
+- Node.js 22.12 or newer
+- pnpm
+
+## Development
+
+Install dependencies:
 
 ```sh
-pnpm create astro@latest -- --template minimal
+pnpm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Start Astro's background development server:
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+pnpm exec astro dev --background
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Manage the server with:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```sh
+pnpm exec astro dev status
+pnpm exec astro dev logs
+pnpm exec astro dev stop
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Quality checks
 
-## 🧞 Commands
+```sh
+pnpm check
+pnpm lint
+pnpm format:check
+pnpm build
+```
 
-All commands are run from the root of the project, from a terminal:
+The production site is generated in `dist/`.
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## Routes
 
-## 👀 Want to learn more?
+- `/` — event landing page
+- `/briefings/departure` — departure briefing holding page
+- `/briefings/arrival` — arrival briefing holding page
+- `404.astro` — custom not-found page
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The temporary briefing pages are marked `noindex` and excluded from the sitemap until their final content is published.
