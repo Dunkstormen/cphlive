@@ -1,7 +1,23 @@
 ---
+import BriefingLinks from "../components/BriefingLinks.astro";
+import Competitions from "../components/Competitions.astro";
+import EventIntro from "../components/EventIntro.astro";
+import Hero from "../components/Hero.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Sponsors from "../components/Sponsors.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-  <p>Copenhagen Live 2026</p>
+<Layout
+  title="Copenhagen Live 2026"
+  description="Copenhagen Live brings virtual pilots and air traffic controllers together for a full day of Scandinavian aviation."
+>
+  <SiteHeader slot="header" />
+  <Hero />
+  <EventIntro />
+  <BriefingLinks />
+  <Competitions />
+  <Sponsors />
+  <SiteFooter slot="footer" />
 </Layout>

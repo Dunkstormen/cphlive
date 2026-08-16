@@ -1,5 +1,6 @@
 {
-  "name": "",
+  "name": "copenhagen-live-2026",
+  "private": true,
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -7,6 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "check": "astro check",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -19,6 +21,7 @@
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.2.1",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
